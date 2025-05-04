@@ -71,7 +71,14 @@ else
         Text = "This game is not recognized.",
     })
 end
-elseif game.PlaceId == 116495829188952 then
+elseif game.PlaceId == 116495829188952 then -- dead rails lobby
+    local success, err = pcall(function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/hungquan99/SkullHub/main/loader.lua'))()
+    end)
+    if not success then
+        warn("Failed to load Dead Rails script: " .. err)
+    end
+elseif game.PlaceId == 70876832253163 then -- dead rails game
     local success, err = pcall(function()
         loadstring(game:HttpGet('https://raw.githubusercontent.com/hungquan99/SkullHub/main/loader.lua'))()
     end)
